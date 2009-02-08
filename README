@@ -1,13 +1,23 @@
 Spark
 =======
 
-Introduction goes here.
-
+Spark lets you seed your database with a set of data, either programatically or via fixtures.
 
 Example
 =======
 
-Example goes here.
+It's insanely easy to use. 
 
+After installation, there will be directories created for each rails environment like so:
 
-Copyright (c) 2008 [name of plugin creator], released under the MIT license
+db/
+  spark/
+    development/
+    test/
+    production/
+
+Place a script (.rb) or a fixture (.yml) into the appropriate directory for the environment you wish to seed, run 'rake spark' and voila: you've seeded your DB.
+
+Not much more to it than that.  Enjoy.
+
+Copyright (c) 2008 [Ian Hunter], released under the MIT license
