@@ -18,7 +18,16 @@ module Spark
 		end
 
 		def random_email
-			"#{random_word}@#{['test','example'][rand(2)}.#{['com','net','org'][rand(3)]}"
+			"#{random_word}@#{['test','example'][rand(2)]}.#{['com','net','org'][rand(3)]}"
 		end
+		
+    def sequential_number(ident) # hash of hashes, each held hash defaults to one
+      @sequentials ||= Hash.new { |hash,key| hash[key] = 1 }
+      @sequentials[ident.to_sym] += 1
+    end
+
+    def random_number
+      rand(32767)+1
+    end
 	end
 end
